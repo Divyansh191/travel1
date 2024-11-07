@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The World Travel Guy</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .navbar1{
+          width: 100%;
+          display: flex;
+          height: 32px;
+          background-color:#111111;
+          justify-content: center;
+          position: fixed;
+          top: 0;
+          z-index: 3;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            height: 82px;
+            background-color:#111111;
+            justify-content: center;
+            position: fixed;
+            top: 23px;
+            z-index: 3;
+        }
+        .logo1{
+            width: 30%;
+            height: 30px;
+        }
+        .pic{
+            height: 50px;
+           padding-top: 15px;
+            margin-left: 20px;
+        }
+        .bar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50%;
+            
+        }
+        .bar a{
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            
+        }
+       
+        .bar div a:hover{
+            color: rgba(5, 255, 255, 0.719);
+        }
+        .background_clip{
+            position: absolute;
+            width: 100%;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+           height: fit-content;
+        }
+        .main_section{
+            padding: 70px 0;
+            position: relative;
+            height: 400px;
+            margin-top: 115px;
+        }
+        .main_section::after{
+          content: '';
+			    position: relative;
+			    width: 100%;
+			    height: 100%;
+			    display: inline-block;
+			    top: 0;
+			    left: 0;
+			    z-index: 0;
+        }
+        .content{
+            color: #fff;
+			
+            align-items: center;
+			
+			max-width: 85%;
+			margin: auto auto;
+        }
+       .content h1{
+        font-size: 73px;
+        margin-top: 70px;
+       }
+       .content p{
+        font-size: 25px;
+       }
+      
+       .btn1{
+        display: inline-block;
+        border: 1px solid #fff;
+        color: #fff;
+        line-height: 2;
+        height: 36px;
+        padding: 2px 20px;
+        border-radius: 0;
+        text-decoration: none;
+        font-weight: 600;
+        width: auto;
+        margin-left: 110px;
+       
+       }
+       .btn1 a span{
+        width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    white-space: nowrap;
+       }
+      .body {
+        color: black;
+        font-family: Arial, sans-serif;
+      }
+      
+      .container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+        margin-top: 30px;
+      }
+      
+      .featured {
+        font-size: 35px;
+        padding: 20px;
+        border-radius: 10px;
+        
+      }
+      
+      .logo {
+        display: inline-block;
+        margin: 10px;
+        width: 138px;
+        height: 109px;
+        background-size: cover;
+        border-radius: 10px;
+      }
+      
+      .logo-title {
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+      
+      .usa-today {
+        background-image: url("https://theworldtravelguy.com/wp-content/uploads/2023/08/USA_Today_n5.jpg");
+      }
+      
+      .nbc-news {
+        background-image: url("https://theworldtravelguy.com/wp-content/uploads/2023/08/NBC_News_n3.png");
+      }
+      
+      .time {
+        background-image: url("https://theworldtravelguy.com/wp-content/uploads/2024/01/TIME-history_sm.jpg");
+      }
+      
+      .bbc-travel {
+        background-image: url("https://theworldtravelguy.com/wp-content/uploads/2023/08/BBC_Travel_n3.jpg");
+      }
+      
+      .travel-leisure {
+        background-image: url("https://theworldtravelguy.com/wp-content/uploads/2023/08/Travel_Leisure_n3.jpg");
+      }
+      .blog_destination{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        margin-top: 10px;
+      }
+      .blog{
+        width: 27%;
+        margin: 0 50px;
+        
+      }
+      
+      .image{
+        width: 100%;
+        height: 250px;
+      }
+      .hlo{
+        font-size: 15px;
+       color: black;
+      }
+      .class{
+        width: 100%;
+        display: flex;
+      }
+      .earth{
+        width: 49%;
+        height: 550px;
+        text-align: left;
+      }
+      .earth h2{
+        font-size: 30px;
+      }
+      .earth p{
+        font-size: 22px;
+      }
+      .input-pic{
+        width: 49%;
+        height: 550px;
+        display: inline;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .input-img{
+        width: 75%;
+        height: 450px;
+        text-align: left;
+        margin-top: 50px;
+        box-shadow: 10px 10px 20px 0px #909090;
+      }
+      .btn2{
+        display: inline-block;
+        border: 1px solid #111111;
+        line-height: 2.5;
+        height: 36px;
+        padding: 2px 20px;
+        border-radius: 24px;
+        font-weight: 600;
+      }
+      .blog_destination_blog{
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 100%;
+    height: 400px;
+      }
+      .blog_location{
+        width: 33%;
+        height: 400px;
+        margin: 0px 20px;
+      }
+      .bg-img{
+        background-image: url('images/pic.jpg');
+        padding: 80px 0;
+        position: relative;
+      }
+      .main-flex{
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        max-width: 90%;
+        margin: 0 auto;
+      }
+      .item{
+          text-align: center;
+          position: relative;
+          width: 100%;
+          text-align: center;
+
+          }
+      .bg-img::before{
+        content:'';
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 00;
+      }
+      .black-strip{
+        background-color: rgb(8, 8, 8);
+        color: #fff;
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 1;
+        position: relative;
+      }
+      /* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+  }
+  .bar {
+      width: 100%;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  }
+  .bar div {
+      margin: 5px 0;
+  }
+  .content h1 {
+      font-size: 3rem;
+      margin-top: 20px;
+  }
+  .content p {
+      font-size: 1.25rem;
+  }
+  .btn1 {
+      margin-left: 0;
+      text-align: center;
+      display: block;
+  }
+  .blog {
+      width: 100%;
+      margin: 0;
+  }
+  .earth, .input-pic {
+      width: 100%;
+  }
+  .input-img {
+      width: 100%;
+  }
+  .blog_location {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+      font-size: 2rem;
+      margin-top: 10px;
+  }
+  .content p {
+      font-size: 1rem;
+  }
+  .btn1 {
+      font-size: 0.875rem;
+      padding: 1px 10px;
+  }
+  .blog {
+      width: 100%;
+      margin: 0;
+  }
+  .blog_location {
+      width: 100%;
+  }
+}
+
+  .header {
+    background-image: url("images/pic.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    height: 300px;
+  }
+  
+  .header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .header .container1 {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 18px;
+  }
+  
+  
+  
+  .header .search i {
+    margin-right: 5px;
+  }
+  .container2 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.footer-first{
+  display:flex;
+  gap: 24px;
+  justify-content: center;
+}
+.footer-first img{
+  height: 48px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.legal {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.legal a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.legal a:hover {
+    text-decoration: underline;
+}
+.map{
+  width: 80%;
+  height: 200px;
+  margin: 0 10%;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+      <div class="navbar1">
+      <div class="black-strip">
+        <div id="clock">Loading time...</div>
+    </div>
+  </div>
+        <div class="navbar">
+            <div class="logo1"><a href="index.html">
+                <img src="https://theworldtravelguy.com/wp-content/uploads/2023/01/Logo_2.jpg" class="pic">
+            </a>
+        </div>
+        <div class="bar">
+            <div><a href="main.html">HOME</a></div>
+            <div><a href="blog.html">BLOG</a></div>
+            <div><a href="destination.html">DESTINATION</a></div>
+            <div><a href="">GALLERY</a></div>
+            <div><a href="about.html">ABOUT</a></div>
+            <div><a href="https://contactus-five.vercel.app/">CONTACT</a></div>
+
+        </div>
+        </div>
+        <div class="main_section">
+               <video autoplay loop muted plays-inline class="background_clip">
+                <source src="lanscape.mp4" type="video/mp4">
+               </video>
+
+               <div class="content">
+                <h1>EXPLORE. DREAM. DISCOVER.</h1>
+                <p>This is a world travel blog featuring beautiful destinations, new experiences and hidden places around the world</p><br>
+                <p>Please tag along!</p><br>
+                
+                   
+                     
+               
+        </div>
+           <div ><a href="" class="btn1"><span>Start Exploring</span></a></div> </div>
+        <div class="container">
+            <div class="featured">
+              <h2 style="text-align:center;">Featured</h2>
+              <div class="logo usa-today"></div>
+              <div class="logo nbc-news"></div>
+              <div class="logo time"></div>
+              <div class="logo bbc-travel"></div>
+              <div class="logo travel-leisure"></div>
+            </div>
+          </div>
+          <div class="blog_destination">
+            <div class="blog">
+              <a href="" style="text-decoration: none;">
+              <img src="https://theworldtravelguy.com/wp-content/uploads/2020/04/DSCF3947_450n.jpg" class="image"><br><br>
+              <div class="hlo" style="margin-left: 85px;"><h2>TRAVEL BLOG</h2></div></a>
+            </div>
+            <div class="blog">
+              <a href="" style="text-decoration: none;">
+                <img src="https://theworldtravelguy.com/wp-content/uploads/2021/05/DSCF1687_450n2.jpg" class="image"><br><br>
+                <div class="hlo" style="margin-left: 95px;"><h2>DESTINATION</h2></div></a>
+            </div>
+            <div class="blog">
+              <a href="" style="text-decoration: none;">
+                <img src="https://theworldtravelguy.com/wp-content/uploads/2021/10/DSCF1029-2_450.jpg" class="image"><br><br>
+                <div class="hlo" style="margin-left: 130px;"><h2>ABOUT</h2></div></a>
+            </div>
+          </div>
+          <div class="class">
+          <div class="input-pic"><img src="https://theworldtravelguy.com/wp-content/uploads/2021/05/IMG_0942-2-3_540.jpg" class="input-img"></div>
+    <div class="earth">
+      <h2>Thanks For Looking!</h2><br>
+      <p>I'm David Leiter, the guy behind this website. I'm an American who's been traveling the world full time for 8 years now.
+
+        <br>I started this travel blog in 2019 to document my own international trips, share my photos, and help others learn how to travel the world and find some really good spots off the beaten path.
+        
+        <br>I'm currently based in Bali, Indonesia, where I met my wife Intan, who’s a Bali local. Now she joins me on these wild and crazy adventures too.
+        
+        <br>Together, we've done some bucket list hikes, climbed active volcanoes, seen exotic wildlife, and visited some spectacular castles, temples, and monuments around the world.
+        
+        <br>I've worked with and been featured by BBC Travel, NBC News, Time, and other companies.
+        
+        <br>I haven’t been everywhere, but it’s on my list. I hope this world travel blog can help and inspire you in your own journeys as well!
+        </p>
+<br><br>
+        <div class="btn2"><a href="#" style="color: #111; text-decoration: none;">READ MORE</a></div>
+    </div>
+
+  </div><br>
+  <div class="container">
+    <div class="featured">
+      <h2 style="text-align:center;">Travel Guides</h2>
+      <p style="font-size: 25px; margin-top: 10px;">Popular travel blog posts & guides</p>
+    </div>
+  </div>
+  <div class="blog_destination">
+    <div class="blog_destination_blog">
+    <div class="blog_location">
+
+      <a href="" style="text-decoration: none;">
+      <img src="images/egypt.jpg" class="image"><br><br>
+      <div class="hlo" style="text-align:center;"><h2>HOW TO VISIT THE PYRAMIDS IN EGYPT</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/2.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>NUSA PENIDA ISLAND GUIDE FOR BALI</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/3.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>22 BEST THINGS TO DO IN JAPAN</h2></div></a>
+      </div>     
+    </div>
+  </div>
+  <div class="blog_destination">
+    <div class="blog_destination_blog">
+    <div class="blog_location">
+
+      <a href="" style="text-decoration: none;">
+      <img src="images/4.jpg" class="image"><br><br>
+      <div class="hlo" style="text-align:center;"><h2>10 BEST THINGS TO DO AT MACHU PICCHU</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/5.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>PETRA JORDAN TRAVEL GUIDE</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/6.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>ANGKOR WAT GUIDE FOR CAMBODIA</h2></div></a>
+      </div>     
+    </div>
+  </div>
+  <div class="blog_destination">
+    <div class="blog_destination_blog">
+    <div class="blog_location">
+
+      <a href="" style="text-decoration: none;">
+      <img src="images/7.jpg" class="image"><br><br>
+      <div class="hlo" style="text-align:center;"><h2>1 DAY ITINERARY FOR YOSEMITE</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/8.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>ZAKYNTHOS ISLAND GUIDE FOR GREECE</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/9.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>SANTORINI TRAVEL GUIDE FOR GREECE</h2></div></a>
+      </div>     
+    </div>
+  </div>
+  <div class="blog_destination">
+    <div class="blog_destination_blog">
+    <div class="blog_location">
+
+      <a href="" style="text-decoration: none;">
+      <img src="images/10.jpg" class="image"><br><br>
+      <div class="hlo" style="text-align:center;"><h2>15 AMAZING WATERFALLS IN ICELAND</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/11.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>ROCK ISLANDS SCENIC FLIGHT IN PALAU</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/12.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>18 BEST WATERFALLS IN INDONESIA</h2></div></a>
+      </div>     
+    </div>
+  </div>
+  <div class="container">
+    <div class="featured">
+      <h2 style="text-align:center;">Hikes</h2>
+      <p style="font-size: 25px; margin-top: 10px;">Bucket list hiking guides</p>
+    </div>
+  </div>
+  <div class="blog_destination">
+    <div class="blog_destination_blog">
+    <div class="blog_location">
+
+      <a href="" style="text-decoration: none;">
+      <img src="images/13.jpg" class="image"><br><br>
+      <div class="hlo" style="text-align:center;"><h2>EVEREST BASE CAMP TREK IN NEPAL</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/14.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>ANGELS LANDING HIKE IN ZION</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/15.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>HUAYNA PICCHU HIKE IN PERU</h2></div></a>
+      </div>     
+    </div>
+  </div>
+  <div class="blog_destination">
+    <div class="blog_destination_blog">
+    <div class="blog_location">
+
+      <a href="" style="text-decoration: none;">
+      <img src="images/16.jpg" class="image"><br><br>
+      <div class="hlo" style="text-align:center;"><h2>26 BEST HIKES IN OAHU HAWAII</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/17.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>18 BEST SLOT CANYONS IN UTAH</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/18.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>STAIRWAY TO HEAVEN HIKE IN HAWAII</h2></div></a>
+      </div>     
+    </div>
+  </div>
+  <div class="blog_destination">
+    <div class="blog_destination_blog">
+    <div class="blog_location">
+
+      <a href="" style="text-decoration: none;">
+      <img src="images/19.jpg" class="image"><br><br>
+      <div class="hlo" style="text-align:center;"><h2>MOUNT FITZ ROY HIKE IN PATAGONIA</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/20.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>MOUNT BROMO CRATER IN INDONESIA</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/21.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>KAWAH IJEN VOLCANIC LAKE IN JAVA</h2></div></a>
+      </div>     
+    </div>
+  </div>
+  <div class="blog_destination">
+    <div class="blog_destination_blog">
+    <div class="blog_location">
+
+      <a href="" style="text-decoration: none;">
+      <img src="images/22.jpg" class="image"><br><br>
+      <div class="hlo" style="text-align:center;"><h2>PERITO MORENO GLACIER WALK</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/23.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center;"><h2>28 BEST HIKES IN UTAH</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/24.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align: center;"><h2>ACATENANGO VOLCANO HIKE IN GUATEMALA</h2></div></a>
+      </div>     
+    </div>
+  </div>
+  <div class="container">
+    <div class="featured">
+      <h2 style="text-align:center;">Destination</h2>
+      <p style="font-size: 25px; margin-top: 10px;">Pick a country and start exploring!</p>
+    </div>
+  </div>
+  <div class="blog_destination">
+    <div class="blog_destination_blog">
+    <div class="blog_location">
+
+      <a href="" style="text-decoration: none;">
+      <img src="images/25.jpg" class="image"><br><br>
+      <div class="hlo" style="text-align:center"><h2>EGYPT</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/26.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center"><h2>INDONESIA</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/27.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center"><h2>JAPAN</h2></div></a>
+      </div>     
+    </div>
+  </div>
+  <div class="blog_destination">
+    <div class="blog_destination_blog">
+    <div class="blog_location">
+
+      <a href="" style="text-decoration: none;">
+  `    <img src="images/28.jpg" class="image"><br><br>
+      <div class="hlo" style="text-align:center"><h2>UNITED STATES</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/29.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center"><h2>PHILIPPINES</h2></div></a>
+    </div>
+    <div class="blog_location">
+      <a href="" style="text-decoration: none;">
+        <img src="images/30.jpg" class="image"><br><br>
+        <div class="hlo" style="text-align:center"><h2>THAILAND</h2></div></a>
+      </div>     
+    </div>
+  </div>
+  <div class="header">
+    <div class="container1" style="margin-top: 66px;">
+      <h1>GET IN TOUCH</h1>
+      <p>Feel free to contact me if you have travel questions, comments, or suggestions!</p>
+      <p>I'll try to get back to you!</p>
+      <div class="search"><i class="fa fa-search"></i> Drag to search <br>
+      </div>
+
+    </div>
+  </div>
+  <div class="container2">
+    <h1>Newsletter</h1>
+    <p>Subscribe to my newsletter for the latest blog posts, tips, & travel guides. Let's stay updated!</p><br><br>
+    <div class="newsletter" id="newsletter">
+      <input type="email" class="input" id="emailInput" placeholder="Email...">
+      <button class="button" id="subscribeBtn">SUBSCRIBE</button>
+    </div>
+  </div>
+  
+<footer>
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14772.966753717787!2d76.6589131671538!3d30.516170522750603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1729768081608!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div><br><br>
+
+  <div class="footer-first">
+    <img src="images/footer.jpeg" alt="">
+    <img src="images/footer1.jpeg" alt="">
+    <img src="images/footer3.jpeg" alt="">
+    <img src="images/footer4.jpeg" alt="">
+</div>
+    <p class="legal">&copy; The World Travel Guy 2024</p>
+    <p class="legal">
+        <a href="#">Affiliate Disclosures</a>
+        ·
+        <a href="#">Privacy Policy</a>
+        ·
+        <a href="#">Terms Of Use</a>
+    </p>
+    <p class="legal">
+        Some of the pages on my travel blog contain affiliate links. Whenever you buy something through one of these links, I get a small commission at no extra cost to you. As an affiliate, I only recommend products and services that I feel are high quality and helpful to my readers. Thanks for your support.
+    </p>
+</footer>
+    </div>
+
+
+    <script src="main.js">
+    </script>
+</body>
+</html>

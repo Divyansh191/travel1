@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .navbar {
+      width: 100%;
+      display: flex;
+      height: 82px;
+      background-color: #111111;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      z-index: 3;
+    }
+
+    .logo1 {
+      width: 30%;
+      height: 30px;
+    }
+
+    .pic {
+      height: 50px;
+      padding-top: 15px;
+      margin-left: 20px;
+    }
+
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+
+    }
+
+    .bar a {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+
+    }
+
+    .bar div a:hover {
+      color: rgba(5, 255, 255, 0.719);
+    }
+
+    .about {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #f7f7f7;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    .about-text h1 {
+      margin-top: 20px;
+      font-size: 36px;
+    }
+
+    .header {
+      background-image: url("https://media.istockphoto.com/id/1472804537/photo/young-man-looks-at-the-sunset-view-standing-on-a-rock-in-the-mountain.jpg?b=1&s=612x612&w=0&k=20&c=3BrkwCoHiUFcO_dHsXxdEkUI2TGkVSQkTvCca-xnFdw=");
+
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      height: 400px;
+      margin-top: 82px;
+    }
+
+    .header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .header .container1 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 18px;
+    }
+
+
+
+    .header .search i {
+      margin-right: 5px;
+    }
+
+    .container2 {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      padding: 40px 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+      margin-right: 20px;
+    }
+
+    .about-text h2 {
+      color: orange;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .about-text h3 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .about-text a {
+      color: orange;
+      text-decoration: none;
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .about-images {
+      flex: 1;
+      min-width: 300px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+
+    .about-images img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .social-links {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-links h3 {
+      font-size: 22px;
+      color: orange;
+      margin-bottom: 15px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icon {
+      text-decoration: none;
+      color: black;
+      font-size: 23px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-icon:hover {
+      color: orange;
+      scale: 1.1;
+      transition: 0.5s;
+    }
+
+    .social-icon:hover a i {
+      color: white;
+      background-color: orange;
+      background-origin: 50%;
+      transition: 0.5s;
+    }
+
+    .newsletter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .input {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-first {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .footer-first img {
+      height: 48px;
+      width: 50px;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 30px;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .social a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .legal {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+
+    .legal a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .legal a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+        .bar {
+          display: none; /* Hide navbar on smaller screens (can add a toggle button) */
+        }
+  
+        .navbar {
+          justify-content: space-between;
+        }
+  
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+  
+        .about-images {
+          grid-template-columns: 1fr;
+        }
+  
+        .header h1 {
+          font-size: 32px;
+        }
+  
+        .header p {
+          font-size: 16px;
+        }
+      }
+  
+      @media (max-width: 480px) {
+        .header h1 {
+          font-size: 28px;
+        }
+  
+        .header p {
+          font-size: 14px;
+        }
+  
+        .about-text {
+          font-size: 16px;
+        }
+  
+        .input {
+          width: 80%;
+        }
+  
+        .button {
+          width: 80%;
+        }
+      }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="navbar">
+      <div class="logo1"><a href="index.html">
+          <img src="https://theworldtravelguy.com/wp-content/uploads/2023/01/Logo_2.jpg" class="pic">
+        </a>
+      </div>
+      <div class="bar">
+        <div><a href="main.html" style="margin: 20px;">HOME</a></div>
+        <div><a href="blog.html">BLOG</a></div>
+        <div><a href="destination.html">DESTINATION</a></div>
+        <div><a href="gallery.html">GALLERY</a></div>
+        <div><a href="about.html">ABOUT</a></div>
+        <div><a href="https://contactus-five.vercel.app/">CONTACT</a></div>
+
+      </div>
+    </div>
+    <!-- Main Content -->
+
+    <div class="header">
+      <div class="container1" style="margin-top: 66px;">
+        <h1>About</h1>
+        <p>More about me and my friends</p>
+      </div>
+    </div>
+
+    <section class="about"></section>
+    <div class="container">
+      <div class="about-text">
+        <h2>ABOUT ME</h2>
+        <h3>David</h3>
+        <p>Thanks for looking! I'm <strong>David Leiter</strong>, and this is my <a href="#">travel blog</a>.</p>
+        <p>I'm an American who's been traveling the world full time for 8 years. Nowadays, I'm usually in <a
+            href="#">Bali, Indonesia</a>, with my wife Intan.</p>
+        <p>I first fell in love with travel on a solo road trip across <a href="#">Iceland</a> in 2016. My budget was
+          small, so I slept in the back of a rental car for 1 month while I drove 7,000 kilometers around the country,
+          filming all the scenic places in Iceland.</p>
+        <p>One of my first videos racked up a few million views and was featured on international TV by <a href="#">BBC
+            Travel</a>.</p>
+        <p>Since then I've solo traveled to many developing countries, including almost every country in Asia, Central
+          America, and the Middle East.</p>
+        <p>I experienced the 7.0 Lombok earthquake in Indonesia in 2018, the bombings in Bangkok in 2019, and a fair
+          share of scams, fights, sicknesses, car accidents, and other crazy things along the way.</p>
+
+        <p>It hasn't always been easy, but over the years I've been blessed with some amazing experiences, including:
+        </p>
+
+        <p>• Hiking to Mount Everest Base Camp in the Himalayas,</p>
+        <p>• Climbing an erupting volcano in Guatemala,</p>
+        <p>• Trekking on glaciers in Patagonia and visiting the Iguazu Falls in Argentina,</p>
+        <p>• Seeing wild Komodo dragons and orangutans in Indonesia,</p>
+        <p>• Sleeping in treehouses in Bali and seeing blue fire in Java,</p>
+        <p>• Skydiving over paradise in Oahu Hawaii,</p>
+        <p>I haven't been everywhere, but it's on my list! I'm always looking for new adventures.</p>
+
+        <p>I hope my travel blog can help and inspire you in your own journeys as well!</p>
+      </div>
+      <div class="about-images">
+        <img src="https://theworldtravelguy.com/wp-content/uploads/2023/01/IMG_5582_600-585x341.jpg" alt="India">
+        <img src="https://theworldtravelguy.com/wp-content/uploads/2023/01/DSCF8628_600-585x390.jpg"
+          alt="Trip to Japan">
+        <img src="https://theworldtravelguy.com/wp-content/uploads/2023/01/DSCF1787_600-585x390.jpg"
+          alt="Adventure travel">
+        <img
+          src="https://theworldtravelguy.com/wp-content/uploads/2023/01/IG_16463543_718908021610574_2520420447936126714_o.jpg"
+          alt="David on a jet ski">
+        <img src="https://theworldtravelguy.com/wp-content/uploads/2024/05/DSCF3182_600-585x390.jpg" alt="statue">
+      </div>
+    </div>
+    </section>
+    <!-- Social Links Section -->
+    <section class="social-links">
+      <h3>Social Links</h3>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="ri-facebook-circle-fill"></i> Facebook</a>
+        <a href="#" class="social-icon"><i class="ri-instagram-fill"></i> Instagram</a>
+        <a href="#" class="social-icon"><i class="ri-youtube-fill"></i> YouTube</a>
+        <a href="#" class="social-icon"><i class="ri-mail-fill"></i> Email</a>
+      </div>
+    </section>
+
+
+    <div class="container2">
+        <h1>Newsletter</h1>
+        <p>Subscribe to my newsletter for the latest blog posts, tips, & travel guides. Let's stay updated!</p><br><br>
+        <div class="newsletter" id="newsletter">
+          <input type="email" class="input" id="emailInput" placeholder="Email...">
+          <button class="button" id="subscribeBtn">SUBSCRIBE</button>
+        </div>
+      </div>
+
+      
+    <footer>
+      <div class="footer-first">
+        <img src="images/footer.jpeg" alt="">
+        <img src="images/footer1.jpeg" alt="">
+        <img src="images/footer3.jpeg" alt="">
+        <img src="images/footer4.jpeg" alt="">
+      </div>
+      <p class="legal">&copy; The World Travel Guy 2024</p>
+      <p class="legal">
+        <a href="#">Affiliate Disclosures</a>
+        ·
+        <a href="#">Privacy Policy</a>
+        ·
+        <a href="#">Terms Of Use</a>
+      </p>
+      <p class="legal">
+        Some of the pages on my travel blog contain affiliate links. Whenever you buy something through one of these
+        links, I get a small commission at no extra cost to you. As an affiliate, I only recommend products and services
+        that I feel are high quality and helpful to my readers. Thanks for your support.
+      </p>
+    </footer>
+  </div>
+<script>
+    
+document.getElementById('subscribeBtn').addEventListener('click', function() {
+   
+    const newsletterDiv = document.getElementById('newsletter');
+    newsletterDiv.innerHTML = '<p style="color:black; font-size: 18px;">Thanks for subscribing!</p>';
+  });
+</script>
+</body>
+
+</html>

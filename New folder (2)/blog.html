@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            height: 82px;
+            background-color:#111111;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            z-index: 3;
+        }
+        .logo1{
+            width: 30%;
+            height: 30px;
+        }
+        .pic{
+            height: 50px;
+           padding-top: 15px;
+            margin-left: 20px;
+        }
+        .bar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50%;
+            
+        }
+        .bar a{
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            
+        }
+       
+        .bar div a:hover{
+            color: rgba(5, 255, 255, 0.719);
+        }
+        .header {
+          background-image: url("images2/city.jpg");
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+          color: white;
+          text-align: center;
+          padding: 20px 0;
+          position: relative;
+          height: 300px;
+        }
+        
+        .header::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .header .container1 {
+          position: relative;
+          z-index: 1;
+        }
+        
+        .header h1 {
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        
+        .header p {
+          font-size: 18px;
+        }
+        
+        
+        
+        .header .search i {
+          margin-right: 5px;
+        }
+        .container2 {
+          width: 80%;
+          margin: 0 auto;
+          padding: 20px;
+          text-align: center;
+      }
+      
+      h1 {
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      
+      .newsletter {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+      }
+      
+      .input {
+          width: 300px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+      
+      .button {
+          padding: 10px 20px;
+          background-color: #000;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.footer-first{
+  display:flex;
+  gap: 24px;
+  justify-content: center;
+}
+.footer-first img{
+  height: 48px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.legal {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.legal a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.legal a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 2em;
+    background-color: #f7f7f7;
+}
+
+.featured-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    text-align: center;
+}
+
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+article h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+article p {
+    margin: 10px 0;
+}
+
+.category {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.read-more {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #ffad33;
+}
+
+/* Media Query for tablets */
+@media (max-width: 768px) {
+    .featured-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 480px) {
+    .featured-posts {
+        grid-template-columns: 1fr;
+    }
+
+    article img {
+        height: 150px;
+    }
+
+    article h2 {
+        font-size: 16px;
+    }
+
+    article p {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+    </style>
+</head>
+<body>
+     <div class="main">
+        <div class="navbar">
+            <div class="logo1"><a href="index.html">
+                <img src="https://theworldtravelguy.com/wp-content/uploads/2023/01/Logo_2.jpg" class="pic">
+            </a>
+        </div>
+        <div class="bar">
+            <div><a href="home.html">HOME</a></div>
+            <div><a href="blog.html">BLOG</a></div>
+            <div><a href="destination.html">DESTINATION</a></div>
+            <div><a href="">GALLERY</a></div>
+            <div><a href="about.html">ABOUT</a></div>
+            <div><a href="https://contactus-five.vercel.app/">CONTACT</a></div>
+
+        </div>
+        
+        </div>
+        <div class="header">
+          <div class="container1" style="margin-top: 66px;">
+            <h1>Blogs</h1>
+            <p>Explore with us</p>
+          </div>
+        </div>
+        <main>
+            <section class="featured-posts">
+                <article>
+                    <img src="images2\ice.jpg">
+                    <h2>Iceland</h2>
+                    <p>Categories: <span class="category">Hiking</span>, <span class="category">Nature</span></p>
+                    <p>Iceland is a Nordic island country between the North Atlantic and Arctic Oceans, on the Mid-Atlantic Ridge between North America and Europe.Famous for their mountains</p>
+                    <button class="read-more">READ MORE</button>
+                </article>
+    
+                <article>
+                    <img src="images2\nepal.jpg">
+                    <h2>NEPAL</h2>
+                    <p>Categories: <span class="category">Culture</span>, <span class="category">Travel</span></p>
+                    <p>Nepal officially the Federal Democratic Republic of Nepal,is a landlocked country in South Asia. It is also known for their nature and culture.</p>
+                    <button class="read-more">READ MORE</button>
+                </article>
+    
+                <article>
+                    <img src="images2\spain.jpg">
+                    <h2>SPAIN</h2>
+                    <p>Categories: <span class="category">Travel Tips</span>, <span class="category">cities</span></p>
+                    <p>Spain, a country on Europe’s Iberian Peninsula, includes 17 autonomous regions with diverse geography and cultures. Capital city Madrid is home to the Royal Palace and Prado museum, housing works by European masters.</p>
+                    <button class="read-more">READ MORE</button>
+                </article>
+            </section>
+            <section class="featured-posts">
+              <article>
+                  <img src="images2\thailand.jpg">
+                  <h2>THAILAND
+                </h2>
+                  <p>Categories: <span class="category">Hiking</span>, <span class="category">Nature</span></p>
+                  <p>Thailand is a Southeast Asian country. It's known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha.</p>
+                  <button class="read-more">READ MORE</button>
+              </article>
+    
+              <article>
+                  <img src="images2\us.jpg">
+                  <h2>India</h2>
+                  <p>Categories: <span class="category">Culture</span>, <span class="category">Travel</span></p>
+                  <p>India, officially the Republic of India, is a country in South Asia. It is the seventh-largest country by area; the most populous country from June 2023 and from the time of its independence in 1947, the world's most populous democracy..It is known for culture and every region.</p>
+                  <button class="read-more">READ MORE</button>
+              </article>
+    
+              <article>
+                  <img src="images2\moroco.jpg">
+                  <h2>Moroco</h2>
+                  <p>Categories: <span class="category">Travel Tips</span>, <span class="category">Blue City</span></p>
+                  <p>Morocco, a North African country bordering the Atlantic Ocean and Mediterranean Sea, is distinguished by its Berber, Arabian and European cultural influences.</p>
+                  <button class="read-more">READ MORE</button>
+              </article>
+          </section>
+        </main>
+        <div class="container2">
+          <h1>Newsletter</h1>
+          <p>Subscribe to my newsletter for the latest blog posts, tips, & travel guides. Let's stay updated!</p><br><br>
+          <div class="newsletter" id="newsletter">
+            <input type="email" class="input" id="emailInput" placeholder="Email...">
+            <button class="button" id="subscribeBtn">SUBSCRIBE</button>
+          </div>
+        </div>
+  
+        
+      <footer>
+        <div class="footer-first">
+          <img src="images/footer.jpeg" alt="">
+          <img src="images/footer1.jpeg" alt="">
+          <img src="images/footer3.jpeg" alt="">
+          <img src="images/footer4.jpeg" alt="">
+        </div>
+        <p class="legal">&copy; The World Travel Guy 2024</p>
+        <p class="legal">
+          <a href="#">Affiliate Disclosures</a>
+          ·
+          <a href="#">Privacy Policy</a>
+          ·
+          <a href="#">Terms Of Use</a>
+        </p>
+        <p class="legal">
+          Some of the pages on my travel blog contain affiliate links. Whenever you buy something through one of these
+          links, I get a small commission at no extra cost to you. As an affiliate, I only recommend products and services
+          that I feel are high quality and helpful to my readers. Thanks for your support.
+        </p>
+      </footer>
+    </div>
+</body>
+</html>
